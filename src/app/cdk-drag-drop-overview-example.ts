@@ -10,15 +10,22 @@ import { Component } from '@angular/core';
 })
 export class CdkDragDropOverviewExample {
   drop(ev: any) {
-    //ev.preventDefault();
+    ev.preventDefault();
     console.log('DROPPED!!');
-    alert('Dropped');
+    console.log(ev);
+    console.log(`page x ${ev.pageX}`);
+    console.log(`page y ${ev.pageY}`);
   }
 
   dragstart(ev: any) {
-    //ev.preventDefault();
     console.log('DRAG STARTED!');
-    //alert('Drag started');
+    console.log(ev);
+    console.log(`page x ${ev.pageX}`);
+    console.log(`page y ${ev.pageY}`);
+  }
+
+  allowDrop(ev: any) {
+    ev.preventDefault();
   }
 }
 

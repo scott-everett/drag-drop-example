@@ -1,12 +1,19 @@
-<div class="example-box" cdkDrag>Drag me around</div>
-
 <div
+  id="drag-box"
+  (drop)="drop($event)"
   class="example-box"
   (dragstart)="dragstart($event)"
-  (drop)="drop($event)"
   draggable="true"
 >
-  HTML Drag
+  Drag Me
+</div>
+<div
+  id="drop-zone"
+  class="example-box"
+  (drop)="drop($event)"
+  (dragover)="allowDrop($event)"
+>
+  Drop Here
 </div>
 
 <!-- Copyright 2023 Google LLC. All Rights Reserved.
